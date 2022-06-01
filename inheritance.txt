@@ -1,0 +1,61 @@
+#include<iostream>
+using namespace std;
+class school
+{
+    public:
+    string school_name;
+    string location;
+    string fees;
+    
+};
+class teacher:public school
+{
+    public:
+    string teacher_eligibility;
+    int salary;
+    void setdata();
+    void getdata();
+};
+class student:public school
+{
+    public:
+    string student_name;
+    int rollno;
+    int standard;
+    void enterdata();
+    void printdata();
+    
+};
+void teacher::setdata(void)
+{
+    teacher_eligibility="PHD";
+    salary=70000;
+}
+void teacher::getdata(void)
+{
+    cout<<"the eligibility of teacher is:"<<teacher_eligibility<<endl;
+    cout<<"the salary per month is:"<<salary<<endl;
+}
+void student::enterdata(void)
+{
+    student_name="pulkit";
+    rollno=159;
+    standard=15;
+}
+void student::printdata(void)
+{
+    cout<<"student name is:"<<student_name<<endl;
+    cout<<"roll number is:"<<rollno<<endl;
+    cout<<"standard is:"<<standard<<endl;
+}
+int main()
+{
+    teacher t;
+    t.setdata();
+    t.getdata();
+    student s;
+    s.enterdata();
+    s.printdata();
+    return 0;
+}
+
